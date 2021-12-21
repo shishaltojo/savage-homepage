@@ -24,7 +24,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 853px;
-  height: 480px;
+  height: 360px;
 
   border-width: 4px;
   border-style: solid;
@@ -36,6 +36,7 @@ body {
 .header {
   background-color: #9368A6;
   overflow: hidden;
+  height: 16px;
 }
 
 .header > p {
@@ -97,4 +98,19 @@ body {
   100% {
     -webkit-transform: translateX(-200%);
   }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+
+  height: calc(100% - 16px);
+}
+
+.image-container {
+  height: 100%;
+}
+
+.image-container > img {
+  max-height: 100%;
 }
