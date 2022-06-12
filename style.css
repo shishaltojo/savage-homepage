@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #0D0D0D;
+  --fg-color: #BFA688;
+  --border-color: #1A2601;
+  --header-color: #2C4002;
+  --text-color: #1A2601;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +20,7 @@ body {
 }
 
 body {
-  background-image: url("images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center left;
+  background-color: var(--bg-color);
 }
 
 .main-window {
@@ -28,13 +33,13 @@ body {
 
   border-width: 4px;
   border-style: solid;
-  border-color: #C29BA3;
+  border-color: var(--border-color);
 
   box-shadow: 1px 1px #333;
 }
 
 .header {
-  background-color: #9368A6;
+  background-color: var(--header-color);
   overflow: hidden;
   height: 16px;
 }
@@ -47,64 +52,15 @@ body {
   width: 100%;
 }
 
-.header > p > span:first-child {
+.header > p > span {
   display: inline-block;
-  -webkit-animation: scrolling-left1 20s linear infinite;
-  animation: scrolling-left1 20s linear infinite;
-}
-
-.header > p > span:last-child {
-  display: inline-block;
-  -webkit-animation: scrolling-left2 20s linear infinite;
-  animation: scrolling-left2 20s linear infinite;
-  animation-delay: 10s;
-}
-
-@keyframes scrolling-left1 {
-  0% {
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes scrolling-left1 {
-  0% {
-    -webkit-transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-  }
-}
-
-@keyframes scrolling-left2 {
-  0% {
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-    -webkit-transform: translateX(-200%);
-  }
-}
-
-@-webkit-keyframes scrolling-left2 {
-  0% {
-    -webkit-transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(-200%);
-  }
 }
 
 .content-container {
   display: flex;
   flex-direction: row;
 
-  height: calc(100% - 16px);
+  height: 100%;
 }
 
 .image-container {
@@ -117,17 +73,19 @@ body {
 }
 
 .links-container {
-  background-color: #F2C9D1;
+  background-color: var(--fg-color);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 40px 0;
 }
 
 .link-container {
   width: 75%;
   text-align: center;
+  color: var(--text-color);
 }
 
 .link-container > h2 {
@@ -137,7 +95,7 @@ body {
 
 .list-group-item {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   margin: 10px;
   line-height: 20px;
 }
